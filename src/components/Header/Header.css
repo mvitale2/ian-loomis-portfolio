@@ -1,0 +1,47 @@
+header {
+  height: 10vh;
+  width: 100%;
+  background-color: var(--bg-secondary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 32px;
+  width: 30%;
+}
+
+header .logo:hover {
+  cursor: pointer;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+
+header nav a {
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--btn-color-hover);
+  cursor: pointer;
+}
+
+header .socials {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .socials a {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+}

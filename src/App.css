@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: var(--font-color-primary);
   --bg-primary: #fff;
   --bg-secondary: #587cc8;
   --bg-tertiary: #4cc5e0;
@@ -12,3 +11,32 @@
   --btn-color-primary: #f79210;
   --btn-color-hover: #fcd204;
 }
+
+button {
+  background-color: var(--btn-color-primary);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--btn-color-hover);
+  cursor: pointer;
+}
+
+/* link styles need to stay in this order */
+
+a {
+  color: var(--font-color-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* a:visited {
+  color: inherit;
+} */
+
+a:hover {
+  cursor: pointer;
+  color: var(--btn-color-primary);
+}
+
