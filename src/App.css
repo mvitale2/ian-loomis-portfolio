@@ -7,9 +7,10 @@
   --bg-tertiary: #4cc5e0;
   --font-color-primary: #000;
   /* second font color should only be used on second bg color */
-  --font-color-secondary: #80cd29;
-  --btn-color-primary: #f79210;
-  --btn-color-hover: #fcd204;
+  --font-color-secondary: #f79210;
+  --font-color-tertiary: #fcd204;
+  --btn-color-primary: #80cd29;
+  --btn-color-hover: #5a901d;
 }
 
 button {
@@ -25,18 +26,4 @@ button:hover {
 
 /* link styles need to stay in this order */
 
-a {
-  color: var(--font-color-secondary);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-/* a:visited {
-  color: inherit;
-} */
-
-a:hover {
-  cursor: pointer;
-  color: var(--btn-color-primary);
-}
 
