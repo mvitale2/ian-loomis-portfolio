@@ -26,4 +26,6 @@ button:hover {
 
 /* link styles need to stay in this order */
 
-
+a {
+  text-decoration: none;
+}
