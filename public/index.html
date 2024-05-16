@@ -28,14 +28,10 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <form name="contact" method="POST" netlify hidden>
-      <label htmlFor="name">Name</label>
-      <input type="text" name="name" />
-      <label htmlFor="email">Email</label>
-      <input type="email" name="email" />
-      <label htmlFor="message">Message</label>
-      <textarea name="message"></textarea>
-      <button type="submit">Submit</button>
+    <form name="contact" method="POST" data-netlify="true" hidden>
+      <input type="text" id="name" name="name" />
+      <input type="email" id="email" name="email" />
+      <textarea name="message" id="message"></textarea>
     </form>
   </body>
 </html>

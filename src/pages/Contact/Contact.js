@@ -68,7 +68,8 @@ function Contact() {
       </div>
       <div className="right">
         {/* input name attributes must match the variables used in the emailjs template */}
-        <form name="contact" method="POST" netlify onSubmit={handleSubmit}>
+        <form name="contact" method="POST" onSubmit={handleSubmit}>
+          <input type="hidden" name="form-name" value="contact" />
           <label htmlFor="name">Name</label>
           <input
             type="text"
