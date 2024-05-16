@@ -8,6 +8,10 @@ import "./Contact.css";
 function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  console.log(`name: ${name}, email: ${email}, message: ${message}`)
   // const form = useRef();
 
   // const sendEmail = (e) => {
@@ -66,11 +70,31 @@ function Contact() {
         {/* input name attributes must match the variables used in the emailjs template */}
         <form name="contact" method="POST" netlify onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
-          <input type="text" name="name" />
+          <input
+            type="text"
+            name="name"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
           <label htmlFor="email">Email</label>
-          <input type="email" name="email" />
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
           <label htmlFor="message">Message</label>
-          <textarea name="message"></textarea>
+          <textarea
+            name="message"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+          ></textarea>
           <button type="submit" disabled={isSubmitting}>
             Submit
           </button>
