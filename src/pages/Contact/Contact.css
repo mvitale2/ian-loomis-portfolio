@@ -18,6 +18,11 @@
   font-size: 24px;
 }
 
+.contact-wrapper .left svg {
+  text-align: center;
+  font-size: 100px;
+}
+
 .contact-wrapper .right {
   display: flex;
   align-items: center;

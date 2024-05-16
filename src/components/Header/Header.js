@@ -17,13 +17,13 @@ function Header() {
         <Link to="/contact">Contact</Link>
       </nav>
       <div className="socials">
-        <a href="#" target="_blank" rel="noreferrer noopener">
+        <a href="https://instagram.com" target="_blank" rel="noreferrer noopener">
           <FaInstagram />
         </a>
-        <a href="#" target="_blank" rel="noreferrer noopener">
+        <a href="https://tumblr.com" target="_blank" rel="noreferrer noopener">
           <FaTumblr />
         </a>
-        <a href="#" target="_blank" rel="noreferrer noopener">
+        <a href="https://twitter.com" target="_blank" rel="noreferrer noopener">
           <FaXTwitter />
         </a>
       </div>
