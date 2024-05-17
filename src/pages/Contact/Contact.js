@@ -21,7 +21,6 @@ function Contact() {
      setIsSubmitting(true);
      // replace service id and update template later
      // currently these messages will go to my email
-     // integrate netlify with sendForm code
      emailjs
        .sendForm("service_ovv4bhg", "template_mp16n74", form.current, {
          publicKey: "dif7BQrUeE-vta83w",
