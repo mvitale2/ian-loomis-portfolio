@@ -31,6 +31,9 @@ function Contact() {
            setIsSubmitting(false);
            setTimeout(() => {
              setStateMessage(null);
+             setName("");
+             setEmail("");
+             setMessage("");
            }, 5000); //hides the message after 5 seconds
          },
          (error) => {
@@ -42,7 +45,6 @@ function Contact() {
          }
        );
      // Clears the form after sending the email
-     e.target.reset();
    };
 
   // const handleSubmit = (e) => {
