@@ -12,40 +12,43 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  console.log(`name: ${name}, email: ${email}, message: ${message}`);
   const form = useRef();
 
-   const sendEmail = (e) => {
-     e.persist();
-     e.preventDefault();
-     setIsSubmitting(true);
-     // replace service id and update template later
-     // currently these messages will go to my email
-     emailjs
-       .sendForm("service_ovv4bhg", "template_mp16n74", form.current, {
-         publicKey: "dif7BQrUeE-vta83w",
-       })
-       .then(
-         (result) => {
-           setStateMessage("Message sent!");
-           setIsSubmitting(false);
-           setTimeout(() => {
-             setStateMessage(null);
-             setName("");
-             setEmail("");
-             setMessage("");
-           }, 5000); //hides the message after 5 seconds
-         },
-         (error) => {
-           setStateMessage("Something went wrong, please try again later.");
-           setIsSubmitting(false);
-           setTimeout(() => {
-             setStateMessage(null);
-           }, 5000);
-         }
-       );
-     // Clears the form after sending the email
-   };
+  const clearContactForm = () => {
+    setEmail("");
+    setMessage("");
+    setName("");
+  };
+
+  const sendEmail = (e) => {
+    e.persist();
+    e.preventDefault();
+    setIsSubmitting(true);
+    // replace service id and update template later
+    // currently these messages will go to my email
+    emailjs
+      .sendForm("service_ovv4bhg", "template_mp16n74", form.current, {
+        publicKey: "dif7BQrUeE-vta83w",
+      })
+      .then(
+        (result) => {
+          setStateMessage("Message sent!");
+          setIsSubmitting(false);
+          setTimeout(() => {
+            setStateMessage(null);
+            clearContactForm();
+          }, 5000); //hides the message after 5 seconds
+        },
+        (error) => {
+          setStateMessage("Something went wrong, please try again later.");
+          setIsSubmitting(false);
+          setTimeout(() => {
+            setStateMessage(null);
+          }, 5000);
+        }
+      );
+    // Clears the form after sending the email
+  };
 
   // const handleSubmit = (e) => {
   //   e.persist();
@@ -98,10 +101,10 @@ function Contact() {
               setMessage(e.target.value);
             }}
           ></textarea>
+          {stateMessage && <span className="submit-msg">{stateMessage}</span>}
           <button type="submit" disabled={isSubmitting}>
             Submit
           </button>
-          {stateMessage && <span className="submit-msg">{stateMessage}</span>}
         </form>
       </div>
     </main>

@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 50%;
 }
 
@@ -37,7 +38,7 @@
 }
 
 .contact-wrapper .right form input,
-textarea {
+.contact-wrapper .right form textarea {
   border: none;
   background-color: var(--bg-tertiary);
   resize: none;
@@ -49,16 +50,10 @@ textarea {
     "Helvetica Neue", sans-serif;
 }
 
-textarea {
+.contact-wrapper .right form textarea {
   height: 10em;
 }
 
-.contact-wrapper .right form button {
-    padding: 20px;
-    align-self: flex-start;
-    border-radius: 5px;
-    font-size: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Ubuntu Mono", "Ubuntu",
-    "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+.contact-wrapper .right form a button {
+  align-self: flex-start;
 }

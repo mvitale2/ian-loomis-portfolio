@@ -10,21 +10,21 @@ function Footer() {
       <Link to="/contact">Let's get in touch!</Link>
       <div className="socials">
         <a
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/stumpovision"
           target="_blank"
           rel="noreferrer noopener"
         >
           <FaInstagram />
         </a>
         <a
-          href="https://www.tumblr.com/"
+          href="https://www.tumblr.com/stumpovision"
           target="_blank"
           rel="noreferrer noopener"
         >
           <FaTumblr />
         </a>
         <a
-          href="https://twitter.com/"
+          href="https://x.com/stumpovision"
           target="_blank"
           rel="noreferrer noopener"
         >

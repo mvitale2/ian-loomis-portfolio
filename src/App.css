@@ -14,8 +14,14 @@
 }
 
 button {
+  font-family: -apple-system, BlinkMacSystemFont, "Ubuntu Mono", "Ubuntu",
+    "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   background-color: var(--btn-color-primary);
   border: none;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 20px;
   transition: all 0.3s ease;
 }
 
