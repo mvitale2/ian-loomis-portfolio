@@ -32,21 +32,3 @@ header nav a {
 header nav a:hover {
   color: var(--font-color-tertiary);
 }
-
-header .socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header .socials a {
-  font-size: 32px;
-  display: flex;
-  align-items: center;
-  color: var(--font-color-secondary);
-  transition: all 0.3s ease;
-}
-
-header .socials a:hover {
-  color: var(--font-color-tertiary);
-}

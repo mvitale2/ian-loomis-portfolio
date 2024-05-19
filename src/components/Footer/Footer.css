@@ -8,15 +8,6 @@ footer {
   align-items: center;
 }
 
-footer .socials a {
-  font-size: 28px;
-  transition: all ease 0.3s;
-}
-
-footer .socials a:hover {
-  color: var(--font-color-tertiary);
-}
-
 footer a {
   color: var(--font-color-secondary);
   text-decoration: none;
