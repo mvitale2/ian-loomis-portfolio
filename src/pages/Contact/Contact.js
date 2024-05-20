@@ -26,8 +26,8 @@ function Contact() {
     // replace service id and update template later
     // currently these messages will go to my email
     emailjs
-      .sendForm("service_ovv4bhg", "template_mp16n74", form.current, {
-        publicKey: "dif7BQrUeE-vta83w",
+      .sendForm("service_95ftg0a", "template_hokg5dr", form.current, {
+        publicKey: "s7Ava5iG_bqLH6UO2",
       })
       .then(
         (result) => {
