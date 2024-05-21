@@ -16,7 +16,7 @@
 }
 
 .contact-wrapper .left span {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .contact-wrapper .left svg {
@@ -29,7 +29,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 40%;
+  width: 50%;
 }
 
 .contact-wrapper .right form {
@@ -37,6 +37,23 @@
   flex-direction: column;
   width: 60%;
   gap: 5px;
+}
+
+.contact-wrapper .right form button {
+  font-family: -apple-system, BlinkMacSystemFont, "Ubuntu Mono", "Ubuntu",
+    "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  background-color: var(--btn-color-primary);
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact-wrapper .right form button:hover {
+  background-color: var(--btn-color-hover);
+  cursor: pointer;
 }
 
 .contact-wrapper .right form input,
@@ -54,4 +71,32 @@
 
 .contact-wrapper .right form textarea {
   height: 10em;
+}
+
+@media (max-width: 900px) {
+  form {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .right {
+    width: 100% !important;
+    margin-bottom: 50px;
+  }
+  form {
+    width: 80% !important;
+  }
+  textarea {
+    height: 8em !important;
+  }
+}
+
+@media (max-height: 667px) {
+  .left span {font-size: 14px !important;}
+  .left {width: 100% !important;}
 }

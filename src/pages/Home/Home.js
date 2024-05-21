@@ -1,11 +1,11 @@
 import React from "react";
+import images from "../../images";
 import { Link } from "react-router-dom";
-import ImageContainer from "../../components/ImageContainer/ImageContainer";
+import ImageGallery from "react-image-gallery";
 import "./Home.css";
 import bgimg from "../../assets/bg-img1.jpg";
-import funni from "../../assets/bg-img2.jpg";
-import gombo from "../../assets/art1.jpg";
-import humbo from "../../assets/bg-img3.jpg";
+
+// image gallery component imported from https://www.npmjs.com/package/react-image-gallery
 
 function Home() {
   return (
@@ -24,15 +24,7 @@ function Home() {
           </Link>
         </div>
       </section>
-      <section className="gallery">
-        <ImageContainer image={funni} />
-        <ImageContainer image={gombo} />
-        <ImageContainer image={humbo} />
-        <ImageContainer image={humbo} />
-        <ImageContainer image={humbo} />
-        <ImageContainer image={humbo} />
-        <ImageContainer image={humbo} />
-      </section>
+      <ImageGallery items={images} />
     </main>
   );
 }

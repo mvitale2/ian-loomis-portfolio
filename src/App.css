@@ -13,6 +13,8 @@
   --btn-color-hover: #5a901d;
 }
 
+/* 
+commented so that it doesn't interfere with the gallery on home page
 button {
   font-family: -apple-system, BlinkMacSystemFont, "Ubuntu Mono", "Ubuntu",
     "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans",
@@ -28,9 +30,9 @@ button {
 button:hover {
   background-color: var(--btn-color-hover);
   cursor: pointer;
-}
+} 
 
-/* link styles need to stay in this order */
+*/
 
 a {
   text-decoration: none;

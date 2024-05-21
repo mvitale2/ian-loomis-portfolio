@@ -23,20 +23,24 @@ function Contact() {
     e.persist();
     e.preventDefault();
     setIsSubmitting(true);
-    // replace service id and update template later
-    // currently these messages will go to my email
     emailjs
       .sendForm("service_95ftg0a", "template_hokg5dr", form.current, {
         publicKey: "s7Ava5iG_bqLH6UO2",
       })
       .then(
         (result) => {
-          setStateMessage("Message sent!");
-          setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-            clearContactForm();
-          }, 5000); //hides the message after 5 seconds
+          if (message === "" || email === "" || name === "") {
+            setStateMessage("Please fill in all fields.");
+            setIsSubmitting(false);
+            setTimeout(() => {setStateMessage(null)}, 5000);
+          } else {
+            setStateMessage("Message sent!");
+            setIsSubmitting(false);
+            setTimeout(() => {
+              setStateMessage(null);
+              clearContactForm();
+            }, 5000); //hides the message after 5 seconds
+          }
         },
         (error) => {
           setStateMessage("Something went wrong, please try again later.");
@@ -53,8 +57,9 @@ function Contact() {
     <main className="contact-wrapper">
       <div className="left">
         <span>
-          For commissions and project inquiries, please email:
-          <em>stumpovision@gmail.com</em> or submit a message via this form.{" "}
+          For commissions and project inquiries, please email{" "}
+          <em>stumpovision@gmail.com</em>, submit a message via this form, or
+          contact me on social media.
         </span>
       </div>
       <div className="right">

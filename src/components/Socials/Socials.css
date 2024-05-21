@@ -15,3 +15,7 @@
 .socials a:hover {
   color: var(--font-color-tertiary);
 }
+
+@media (max-width: 768px) {
+  .socials {margin-bottom: 5px;}
+}

@@ -32,3 +32,13 @@ header nav a {
 header nav a:hover {
   color: var(--font-color-tertiary);
 }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: 20vh;
+  }
+  nav {
+    width: 20em !important;
+  }
+}
